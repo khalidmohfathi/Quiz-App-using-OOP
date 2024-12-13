@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <title>Quiz-App</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+   <link rel="stylesheet" href="css/all.min.css">
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-light py-5">
+
+   <section id="setting" class="show animate__animated animate__fadeInLeft">
+      <div class="bg-white overflow-auto w-50 m-auto shadow-lg  rounded-lg">
+         <h1 class="text-center text-spec py-5 bg-light border-bottom">Setting Your Quiz</h1>
+         <div class="p-4">
+            <div class="form-group">
+               <label for="category" class="text-spec">Category</label>
+               <select id="category" class="form-control" name="category">
+                  <option value="9">General Knowledge</option>
+                  <option value="27">Animals</option>
+                  <option value="15">Video Games</option>
+                  <option value="23">History</option>
+                  <option value="21">Sports</option>
+                  <option value="18">Science: Computers</option>
+               </select>
+            </div>
+            <div class="form-group">
+               <label for="difficulty" class="text-spec"> Difficulty</label>
+               <div class="form-check" id="difficulty">
+
+                  <label class="form-check-label">
+                     <input type="radio" class="form-check-input" name="difficulty" value="easy" checked>
+                     Easy
+                  </label>
+               </div>
+               <div class="form-check">
+                  <label class="form-check-label">
+                     <input type="radio" class="form-check-input" name="difficulty" value="medium">
+                     Medium
+                  </label>
+               </div>
+               <div class="form-check">
+                  <label class="form-check-label">
+                     <input type="radio" class="form-check-input" name="difficulty" value="hard">
+                     Hard
+                  </label>
+               </div>
+
+            </div>
+            <div class="form-group">
+               <Label class="form-check-label text-spec">Number Of Questions</Label>
+               <input type="number" class="form-control" id="numberOfQuestions" aria-describedby="helpId"
+                  placeholder="Enter Number of Questions" min="1" max="50" required>
+            </div>
+            <div id="alert1" class="alert alert-danger mt-3">Please Choose Number of Questions between 1 and 50</div>
+            <button id="startBtn" class="btn float-end py-2 px-4 bg-spec rounded-pill text-white my-4">Start
+            </button>
+         </div>
+      </div>
+   </section>
+
+
+   <section id="quiz" class="  animate__animated animate__fadeInRight ">
+      <div class="bg-white w-50 m-auto shadow-lg rounded-lg overflow-auto">
+         <div class="p-3 bg-light border-bottom overflow-auto">
+            <h1 class="text-spec text-center">Quiz</h1>
+            <span class="float-end bg-spec rounded-pill text-white p-2 "><span id="currentQuestion"></span> of <span
+                  id="totalNumberOfQuestions"></span> Questions</span>
+         </div>
+
+         <div class="p-4 text-spec">
+            <h5 class="d-inline">Q: </h5>
+            <h5 id="question" class="d-inline"></h5>
+            <ul id="rowAnswer" class="list-inline pt-3">
+
+            </ul>
+            <div id="alert" class="alert alert-danger mt-3">Please Choose Your Answer</div>
+            <button class="btn float-end py-2 px-4 bg-spec rounded-pill text-white my-4" id="next">
+               Next
+            </button>
+         </div>
+      </div>
+   </section>
+
+
+   <section id="finish" class="  animate__animated animate__fadeInUp ">
+      <div class="bg-white w-50 m-auto shadow-lg rounded overflow-auto text-center">
+         <h1 class=" text-spec py-5 bg-light border-bottom">Finish</h1>
+         <div class="p-4">
+            <h5 class=" text-spec">Score</h5>
+            <h4 class=" text-spec" id="score"></h4>
+            <button class="btn float-end py-2 px-4 bg-spec rounded-pill text-white my-4" id="tryBtn">Try
+               Again?</button>
+         </div>
+      </div>
+   </section>
+
+   <script src="./js/bootstrap.bundle.min.js"></script>
+   <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>
